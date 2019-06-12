@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+<form action="<%= posts_path %>" method="get">
+  <input type="text" name="q">
+</form>
+<table id="postTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @posts %>
+  </tbody>
+</table>
+
+<%= render 'form', post: @post %>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+
+<script>
+
+</script>
